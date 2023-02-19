@@ -41,3 +41,8 @@ export class RestService {
       );
   }
 }
+/**
+ * Il reste à implémenter les autres requêtes permettant de naviguer
+ * dans les catégories et de créer, modifier et supprimer une
+ * catégorie.
+ */

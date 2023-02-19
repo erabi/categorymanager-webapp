@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CategoryTableComponent } from 'src/app/categories/category-table/category-table.component';
-//import { AuthGuardService } from 'src/app/shared/services/auth-guard.service';
+
+/* Il faudrait rajouter une vérification de l'authentification aux routes,
+* à l'aide d'un service qui implémente l'interface CanActivate qui
+* permettra de décider quelle route est activée quand l'utilisateur est authentifié.
+*/
 
 const categoriesRoutes: Routes = [
-  //{ path: 'category/:id', component: CategoryComponent },
-  //{ path: 'category/new', component: CategoryComponent },
   { path: 'categories', component: CategoryTableComponent },
 ];
 

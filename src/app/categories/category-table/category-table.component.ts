@@ -1,4 +1,4 @@
-import { Component, Inject, ViewChild, OnInit, AfterViewInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Category } from '../category';
 import { CategoryService } from 'src/app/shared/services/category.service';
@@ -25,7 +25,8 @@ export class CategoryTableComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParamMap.subscribe(params => {
       const selectedPage = params.get('page');
-      this.categoryService.getAll(selectedPage ? +selectedPage : 0).subscribe(data => this.categories = data.content);
+      this.categoryService.getAll(selectedPage ? +selectedPage : 0)
+      .subscribe(data => this.categories = data.content);
     });
 
 
